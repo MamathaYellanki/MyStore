@@ -2,9 +2,10 @@ package com.qa.testscripts;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.qa.pages.Store_Page;
@@ -77,10 +78,10 @@ public class OrderProduct extends TestBase {
 	  
 	  // Verify that Product is ordered
 	  if(ConfirmationText.contains("complete")) {
-	   System.out.println("Order Completed: Test Case Passed");
+	   Reporter.log("Order Completed: Test Case Passed");
 	  }
 	  else {
-	   System.out.println("Order Not Successfull: Test Case Failed");
+		  Reporter.log("Order Not Successfull: Test Case Failed");
 	  }
 	 
 	  

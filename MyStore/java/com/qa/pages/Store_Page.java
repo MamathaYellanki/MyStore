@@ -1,8 +1,9 @@
 package com.qa.pages;
-
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -11,6 +12,28 @@ public class Store_Page {
 	
 WebDriver driver;
 
+// search
+@FindBy(xpath="//*[@id=\"search_query_top\"]")
+WebElement search;
+
+public WebElement getSearch() {
+	return search;
+}
+
+@FindBy(xpath="//*[@id=\"searchbox\"]/button")
+WebElement magnifierBtn;
+
+public WebElement getMagnifierBtn() {
+	return magnifierBtn;
+}
+
+
+@FindAll(@FindBy(className="product-name"))
+List<WebElement>ItemNames;
+
+public List<WebElement> getItemNames() {
+	return ItemNames;
+}
 
 //Click on Sign in
 @FindBy(linkText="Sign in")
@@ -43,7 +66,7 @@ public WebElement getSubmit() {
 }
 
 
-//womenmenu
+//women menu
 @FindBy(xpath = "//a[@title='Women']")
 WebElement womenLink;
 

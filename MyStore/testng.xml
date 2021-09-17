@@ -4,10 +4,15 @@
 <listeners>
   <listener class-name="com.qa.utility.Report" />
   </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="ChromeTest">
     <classes>
       <class name="com.qa.testscripts.TestBase"/>
-      <class name="com.qa.testscripts.OrderProduct"/>
+      <class name="com.qa.testscripts.LoginTest"/>
+      <class name="com.qa.testscripts.Search_Test"/>
+       <class name="com.qa.testscripts.OrderProduct"/>
     </classes>
   </test> <!-- Test -->
+  
+  
 </suite> <!-- Suite -->
+
