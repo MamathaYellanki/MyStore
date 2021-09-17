@@ -190,33 +190,74 @@ public WebElement getText1() {
 	return text;
 }
 
+//contact us
+
+@FindBy(xpath="//*[@id=\"contact-link\"]/a")
+WebElement contactUs;
+
+public WebElement getContactUs() {
+	return contactUs;
+}
+//subject Headline
+@FindBy(id="id_contact")
+WebElement subject;
+
+public Select getSubject() {
+	Select cat1 = new Select(subject);
+	return cat1;
+}
+//Email
+@FindBy(id="email")
+WebElement email1;
+
+public WebElement getEmail1() {
+	return email1;
+}
+//order preference
+@FindBy(id="id_order")
+WebElement orderPrefer;
+
+public WebElement getOrderpref() {
+	return orderPrefer;
+}
+//choose file
+@FindBy(xpath="//*[@id=\"uniform-fileUpload\"]/span[2]")
+WebElement chooseFile;
+
+
+public WebElement getChooseFile() {
+	return chooseFile;
+}
+
+
+//message
+@FindBy(id="message")
+WebElement message;
+
+public WebElement getMessage() {
+	return message;
+}
+@FindBy(xpath="//*[@id=\"submitMessage\"]/span")
+WebElement send;
+
+
+public WebElement getSend() {
+	return send;
+}
+
+@FindBy(xpath="//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
+WebElement signOut;
+
+public WebElement getSignOut() {
+	return signOut;
+}
+
+
 public Store_Page(WebDriver driver) {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
 	  
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
