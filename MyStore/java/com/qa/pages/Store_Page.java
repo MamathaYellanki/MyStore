@@ -12,28 +12,66 @@ public class Store_Page {
 	
 WebDriver driver;
 
-// search
-@FindBy(xpath="//*[@id=\"search_query_top\"]")
-WebElement search;
+//account creation
+@FindBy(xpath="//*[@id=\"email_create\"]")
+WebElement createAccount;
 
-public WebElement getSearch() {
-	return search;
-}
+@FindBy(xpath="//*[@id=\"SubmitCreate\"]/span")
+WebElement createBtn;
 
-@FindBy(xpath="//*[@id=\"searchbox\"]/button")
-WebElement magnifierBtn;
+//gender
 
-public WebElement getMagnifierBtn() {
-	return magnifierBtn;
-}
+@FindBy(id="id_gender2")
+WebElement gender;
 
+@FindBy(id="customer_firstname")
+WebElement fname;
 
-@FindAll(@FindBy(className="product-name"))
-List<WebElement>ItemNames;
+@FindBy(id="customer_lastname")
+WebElement lname;
 
-public List<WebElement> getItemNames() {
-	return ItemNames;
-}
+@FindBy(id="email")
+WebElement email2;
+
+@FindBy(id="passwd")
+WebElement password;
+
+@FindBy(id="firstname")
+WebElement first;
+
+@FindBy(id="lastname")
+WebElement last;
+
+@FindBy(id="company")
+WebElement company;
+
+@FindBy(id="address1")
+WebElement address1;
+
+@FindBy(id="address2")
+WebElement address2;
+
+@FindBy(id="city")
+WebElement city;
+
+@FindBy(id="postcode")
+WebElement postcode;
+
+@FindBy(id="other")
+WebElement other;
+
+@FindBy(id="phone")
+WebElement phone;
+
+@FindBy(id="phone_mobile")
+WebElement phone_mobile;
+
+@FindBy(id="alias")
+WebElement alias;
+
+@FindBy(xpath="//*[@id=\"submitAccount\"]/span")
+WebElement register1;
+
 
 //Click on Sign in
 @FindBy(linkText="Sign in")
@@ -65,7 +103,28 @@ public WebElement getSubmit() {
 	return submit;
 }
 
+//search
+@FindBy(xpath="//*[@id=\"search_query_top\"]")
+WebElement search;
 
+public WebElement getSearch() {
+	return search;
+}
+
+@FindBy(xpath="//*[@id=\"searchbox\"]/button")
+WebElement magnifierBtn;
+
+public WebElement getMagnifierBtn() {
+	return magnifierBtn;
+}
+
+
+@FindAll(@FindBy(className="product-name"))
+List<WebElement>ItemNames;
+
+public List<WebElement> getItemNames() {
+	return ItemNames;
+}
 //women menu
 @FindBy(xpath = "//a[@title='Women']")
 WebElement womenLink;
@@ -237,6 +296,7 @@ WebElement message;
 public WebElement getMessage() {
 	return message;
 }
+//submit msz
 @FindBy(xpath="//*[@id=\"submitMessage\"]/span")
 WebElement send;
 
@@ -247,6 +307,8 @@ public WebElement getSend() {
 
 @FindBy(xpath="//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
 WebElement signOut;
+
+//signOut
 
 public WebElement getSignOut() {
 	return signOut;
